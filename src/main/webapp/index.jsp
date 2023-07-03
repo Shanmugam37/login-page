@@ -1,148 +1,98 @@
 <!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>OMM.com</title>
- <style>
- * {
-  box-sizing: border-box;
- }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website with Login & Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">CodingLab</a>
 
- /* Style the body */
- body {
-  font-family: Arial;
-  margin: 0;
- }
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Home</a>
+            <a href="#" class="nav_link">Product</a>
+            <a href="#" class="nav_link">Services</a>
+            <a href="#" class="nav_link">Contact</a>
+          </li>
+        </ul>
 
- /* Header/logo Title */
- .header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
- }
+        <button class="button" id="form-open">Login</button>
+      </nav>
+    </header>
 
- /* Style the top navigation bar */
- .navbar {
-  display: flex;
-  background-color: rgb(23, 5, 56);
- }
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
 
- /* Style the navigation bar links */
- .navbar a {
-  color: white;
-  padding: 20px 124px;
-  text-decoration: none;
-  text-align: center;
- }
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
 
- /* Change color on hover */
- .navbar a:hover {
-  background-color: #ddd;
-  color: black;
- }
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
 
- /* Column container */
- .row {  
-  display: flex;
-  flex-wrap: wrap;
- }
+            <button class="button">Login Now</button>
 
- /* Create two unequal columns that sits next to each other */
- /* Sidebar/left column */
- .side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
- }
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
 
- /* Main column */
- .main {
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
- }
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
 
- /* Fake image, just for this example */
- .fakeimg {
-  background: #aaa;
-  width: 100%;
-  padding: 10px;
- }
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
 
- /* Footer */
- .footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
- }
+            <button class="button">Signup Now</button>
 
- /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
- @media (max-width: 700px) {
-  .row, .navbar {   
-    flex-direction: column;
-  }
- }
- </style>
-</head>
-<body>
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-<!-- Note -->
-<div style="background:rgb(255, 202, 68);padding:5px">
-  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
-</div>
-
-<!-- Header -->
-<div class="header">
-  <h1>My Portafolio</h1>
-  <p>These are some <b>projects</b> that I have done</p>
-</div>
-
-<!-- Navigation Bar -->
-<div class="navbar">
-  <a href="file:///Users/appleroom/Documents/Apponix/Frontend/Assigments/JS:TS/ludo.html">Ludo Game</a>
-  <a href="file:///Users/appleroom/Documents/Apponix/Frontend/Assigments/JS:TS/Digitalclock.html">Digital Clock</a>
-  <a href="file:///Users/appleroom/Documents/Apponix/Frontend/Assigments/JS:TS/calculator.html">Calculator</a>
-  <a href="#">e-shop</a>
-  <a href="#">Tutorial Videos</a>
-</div>
-
-<!-- The flexible grid (content) -->
-<div class="row">
-  <div class="side">
-    <h5><i>Hello World!</i> My Name Is:</h5>
-    <h2>Oscar Manzano Morgado</h2>
-    <div class="fakeimg" style="height:413px;">
-      <img src="/Users/appleroom/Documents/Apponix/Frontend/Assigments/JS:TS/beetleomm.jpg" alt = "beetlejuice" height="auto;" width="393px;" >
-    </div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
+
+
 
