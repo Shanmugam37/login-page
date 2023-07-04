@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>maven-cicd-project</groupId>
-  <artifactId>cicd-for-webapp</artifactId>
+  <artifactId>login-page</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
